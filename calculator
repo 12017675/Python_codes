@@ -1,0 +1,21 @@
+def_calculator():
+  while True:
+    print("operations:\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.exit")
+    choice=input("select operation(1/2/3/4/5):")
+    if choice=='5':
+      print("Existing Calculator...")
+      break
+    num1,num2=get_input()
+    if choice=='1':
+      print("Result:",Add(num1,num2))
+    elif choice=='2':
+      print("Result:",Subtract(num1,num2))
+    elif choice=='3':
+      print("Result:",Multiply(num1,num2))
+    elif choice=='4':
+      if num2==0:
+        print("Error: cannot divide by zero")
+      else:
+        print("Result:",Divide(num1,num2))
+    else:
+      print("Invalid choice: please select a valiud operation")
