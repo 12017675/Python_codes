@@ -1,0 +1,17 @@
+import random
+while True:
+options=["Rock","Paper","Scissor"]
+User_choice=input("choice Rock,Paper,or Scissor:")
+Computer_choice=random.choice(options)
+print("Computer choice:",Computer_choice)
+if User_choice==Computer_choice:
+  print("It's a tie!")
+elif User_choice=="Rock" and Computer_choice=="Scissor":
+  print("You win!")
+elif User_choice=="Paper" and Computer_choice=="Rock":
+  print("You win!")
+else:
+  print("You win!")
+play_again=input("play again? (y/n):")
+if play_again.lower()!="y":
+  break
